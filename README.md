@@ -1,6 +1,6 @@
 Ce projet demandait pour la validation du module front de notre formation Developpeur Web/ Web Mobile de créer un site e-commerce en nous servant de l'api https://fakestoreapi.com/ .
 
-============================================================================================
+===========================================================================
 
 Les consignes étaient les suivantes:
 
@@ -19,7 +19,7 @@ Ajouter un système d'inscription, connexion déconnexion, modification et suppr
 Ajouter une barre de recherche fonctionnelle.
 Ajouter un système de tri. (par catégorie, prix...)
 
-============================================================================================
+===========================================================================
 
 Le travail en équipe étant autorisé, ce projet a été mené conjointement par :
 
