@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Meta description -->
+		<meta
+			name="description"
+			content="Shop Elite - Votre boutique en ligne proposant une large sélection de produits de qualité à prix compétitifs. Livraison rapide et service client exceptionnel." />
+		<!-- Open Graph pour partage social -->
+		<meta property="og:title" content="Shop Elite - Votre boutique en ligne" />
+		<meta
+			property="og:description"
+			content="Découvrez notre sélection de produits de qualité à prix compétitifs. Livraison rapide et service client exceptionnel." />
+		<meta property="og:image" content="/Images/og-image.jpg" />
+		<meta property="og:url" content="https://www.shopelite.fr/" />
+		<meta property="og:type" content="website" />
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Shop Elite - Votre boutique en ligne" />
+		<meta
+			name="twitter:description"
+			content="Découvrez notre sélection de produits de qualité à prix compétitifs." />
+		<meta name="twitter:image" content="/Images/og-image.jpg" />
+		<!-- Lien canonique -->
+		<link rel="canonical" href="https://www.shopelite.fr/" />
+
+		<!-- Préchargement des ressources critiques -->
+		<link rel="preload" href="style.css" as="style" />
+		<link rel="preload" href="./Images/Recherche.svg" as="image" />
+		<link rel="preload" href="./Images/Login.png" as="image" />
+		<link rel="preload" href="./Images/Panier.png" as="image" />
+
+		<!-- Police optimisée -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+			media="print"
+			onload="this.media='all'" />
+		<!-- Fallback pour la police -->
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+				rel="stylesheet" />
+		</noscript>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Charger les modules JavaScript avec defer -->
+		<script src="js/utils.js" defer></script>
+		<script src="js/api.js" defer></script>
+		<script src="js/products.js" defer></script>
+		<script src="js/cart.js" defer></script>
+		<script src="js/search.js" defer></script>
+		<script src="js/modals.js" defer></script>
+		<script src="js/ui.js" defer></script>
+		<script src="js/app.js" defer></script>
+		<title>Shop Elite - Votre boutique en ligne de produits de qualité</title>
+	</head>
+	<body class="homepage">
+		<a href="#main-content" class="skip-to-content"
+			>Aller au contenu principal</a
+		>
+		<header>
+			<nav class="Menu">
+				<div class="Menu-Titre">
+					<a href="#accueil">
+						<h1>Shop Elite</h1>
+						<p>Votre boutique en ligne</p>
+					</a>
+				</div>
+
+				<div class="icons-menu">
+					<img
+						class="icon icon-recherche"
+						src="./Images/Recherche.svg"
+						alt="Rechercher des produits"
+						width="24"
+						height="24" />
+					<a href="#login" aria-label="Se connecter à votre compte">
+						<img
+							class="icon icon-login"
+							src="./Images/Login.png"
+							alt="Connexion"
+							width="24"
+							height="24" />
+					</a>
+					<div class="icon-panier-container">
+						<img
+							class="icon icon-panier"
+							src="./Images/Panier.png"
+							alt="Votre panier d'achat"
+							width="24"
+							height="24" />
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main-content" class="main-content">
+			<section id="accueil">
+				<div class="introduction">
+					<br />
+					<h2>Bienvenue dans notre univers</h2>
+					<p>
+						Découvrez notre sélection de produits de qualité à prix compétitifs.
+						Avec une livraison rapide et un service client exceptionnel, votre
+						satisfaction est notre priorité.
+					</p>
+				</div>
+				<div class="container">
+					<h2>Notre Collection</h2>
+					<div id="products-container" class="products-container">
+						<p class="loading">Chargement des produits...</p>
+					</div>
+				</div>
+			</section>
+			<section id="login">
+				<div class="Connexion container">
+					<h2>Se connecter</h2>
+					<p>Accédez à votre espace en toute simplicité.</p>
+					<p>
+						Consultez vos commandes, suivez vos livraisons et retrouvez
+						facilement l'historique de vos achats.
+					</p>
+
+					<form id="loginForm" action="" method="post">
+						<div class="Mail">
+							<label for="email">Adresse E-mail</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="Saisissez votre e-mail" />
+							<p class="error-message"></p>
+						</div>
+						<div class="MDP">
+							<label for="mdp">Mot de passe</label>
+							<div class="input-container">
+								<input
+									class="inputMDP"
+									type="password"
+									name="mdp"
+									id="mdp"
+									placeholder="Saisissez votre mot de passe" />
+								<img
+									class="LogoEyes1"
+									src="./Images/eyes.png"
+									alt="Afficher le mot de passe"
+									width="20"
+									height="20"
+									loading="lazy" />
+								<img
+									class="LogoEyes2"
+									src="./Images/noeyes.png"
+									alt="Masquer le mot de passe"
+									width="20"
+									height="20"
+									loading="lazy" />
+							</div>
+							<p class="error-message"></p>
+						</div>
+						<button type="submit" value="Connectez-vous" class="btn-form">
+							Connectez-vous
+						</button>
+						<button id="button-mdp" type="button" class="btn-form">
+							Mot de passe oublié ?
+						</button>
+					</form>
+				</div>
+
+				<div class="Creation-compte container">
+					<h2>Création d'un compte</h2>
+					<p>
+						Vous n'avez pas encore de compte ? Rejoignez notre communauté de
+						passionnés
+					</p>
+					<p>Créez votre compte et commencez votre voyage</p>
+					<button id="buttonCompte" class="INPUT btn-form" type="button">
+						Je crée mon compte
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<!-- Modales -->
+		<div class="modal-mdp">
+			<div class="modal-mdp-container">
+				<h2>🔐 Vous avez oublié votre mot de passe ?</h2>
+				<p>
+					Saisissez votre adresse e-mail enregistrée. Nous vous enverrons un
+					lien pour réinitialiser votre mot de passe.
+				</p>
+				<form action="" method="POST">
+					<input
+						type="email"
+						name="email"
+						placeholder="Votre adresse e-mail"
+						required />
+					<button type="submit" class="btn-form">Envoyer</button>
+					<button type="button" class="button-accueil btn-form">
+						<a href="#accueil">Accueil</a>
+					</button>
+					<button type="button" class="button-fermer btn-form">Retour</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal-compte">
+			<div class="modal-compte-container">
+				<h2>Créez votre compte</h2>
+				<form id="signup-form" action="" method="POST">
+					<div class="form-groupe">
+						<label for="signup-email">E-mail</label>
+						<input
+							type="email"
+							id="signup-email"
+							name="email"
+							placeholder="votreemail@exemple.com"
+							required />
+					</div>
+
+					<div class="form-groupe">
+						<label for="password">Mot de passe</label>
+						<input
+							type="password"
+							id="password"
+							name="password"
+							placeholder="Choisissez un mot de passe sécurisé"
+							required />
+					</div>
+
+					<div class="form-groupe">
+						<label for="firstname">Prénom</label>
+						<input
+							type="text"
+							id="firstname"
+							name="firstname"
+							placeholder="Votre prénom"
+							required />
+					</div>
+
+					<div class="form-groupe">
+						<label for="lastname">Nom</label>
+						<input
+							type="text"
+							id="lastname"
+							name="lastname"
+							placeholder="Votre nom"
+							required />
+					</div>
+
+					<div class="form-groupe">
+						<label for="phone">Numéro de téléphone</label>
+						<div class="input-tel">
+							<select id="prefix" name="prefix" class="tel-prefix" required>
+								<option value="+33">+33</option>
+							</select>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								placeholder="6 12 34 56 78"
+								class="tel-input"
+								required />
+						</div>
+					</div>
+					<button type="submit" class="btn-form">Créer un compte</button>
+				</form>
+				<button id="buttonFermerCompte" type="button" class="btn-form">
+					Fermer
+				</button>
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-logo">Shop Elite</div>
+				<div class="contact-info">
+					<p>Email: Shop-Elite@pro.fr</p>
+					<p>Téléphone: 01 23 45 67 89</p>
+				</div>
+				<div class="copyright">
+					&copy; 2025 Elite Shop - Tous droits réservés
+				</div>
+			</div>
+		</footer>
+
+		<!-- Données structurées Schema.org -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "Shop Elite",
+				"url": "https://www.shopelite.fr/",
+				"description": "Votre boutique en ligne proposant une large sélection de produits de qualité",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://www.shopelite.fr/search?q={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
+			}
+		</script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Shop Elite",
+				"url": "https://www.shopelite.fr/",
+				"logo": "https://www.shopelite.fr/Images/logo.png",
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"telephone": "+33123456789",
+					"contactType": "customer service",
+					"email": "Shop-Elite@pro.fr",
+					"availableLanguage": "French"
+				},
+				"sameAs": [
+					"https://www.facebook.com/shopelite",
+					"https://www.instagram.com/shopelite",
+					"https://twitter.com/shopelite"
+				]
+			}
+		</script>
+	</body>
+</html>
