@@ -1,6 +1,7 @@
 Ce projet demandait pour la validation du module front de notre formation Developpeur Web/ Web Mobile de créer un site e-commerce en nous servant de l'api https://fakestoreapi.com/ .
 
 ============================================================================================
+
 Les consignes étaient les suivantes:
 
 Partie 1 (niveau facile)
@@ -21,6 +22,9 @@ Ajouter un système de tri. (par catégorie, prix...)
 ============================================================================================
 
 Le travail en équipe étant autorisé, ce projet a été mené conjointement par :
+
 Antonio Falvo (github: https://github.com/FalvoAntonio ): Html et CSS + fonctions et affichage du login
+
 Valentin Spatafora (github: https://github.com/Valentinspa ) : Scripts de modales et leurs CSS
+
 Raphael Marmol (github: https://github.com/Saltyway12 ) : Scripts et ajustements des créations html du script + nesting du CSS
